@@ -1,0 +1,19 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class DemoDataSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $this->call([
+            SpecialtySeeder::class,
+            DoctorSeeder::class,
+            PatientSeeder::class,
+            AvailabilitySeeder::class,
+            DemoAppointmentSeeder::class,
+        ]);
+    }
+}
