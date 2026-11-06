@@ -1,0 +1,14 @@
+.estadisticas .estadisticas-filtros { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; align-items: end; }
+.estadisticas label { display: grid; gap: 6px; font-size: .85rem; }
+.estadisticas .campo__entrada { padding: 10px 12px; }
+.estadisticas .estadisticas-panel { padding: 22px; display: grid; gap: 16px; }
+.estadisticas-graficos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.estadisticas-barras { display: grid; gap: 12px; max-height: 360px; overflow: auto; padding: 4px; }
+.estadisticas-barra { display: grid; grid-template-columns: minmax(90px, 1fr) minmax(80px, 2fr) auto; align-items: center; gap: 12px; font-size: .85rem; }
+.estadisticas progress { width: 100%; height: 18px; accent-color: #1677c8; }
+.estadisticas progress[data-estado="REALIZADA"] { accent-color: #218267; }
+.estadisticas progress[data-estado="CANCELADA"] { accent-color: #b43b4a; }
+.estadisticas progress[data-estado="NO_ASISTIO"] { accent-color: #9b691b; }
+.estadisticas progress[data-estado="REPROGRAMADA"] { accent-color: #675293; }
+.estadisticas-criterio { font-size: .86rem; line-height: 1.7; color: #52687a; }
+@media (max-width: 850px) { .estadisticas-graficos { grid-template-columns: 1fr; } }
