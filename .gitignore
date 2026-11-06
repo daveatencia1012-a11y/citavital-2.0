@@ -1,0 +1,95 @@
+# ==========================================
+# CITAVITAL - ARCHIVOS IGNORADOS POR GIT
+# ==========================================
+
+# Entorno y credenciales
+.env*
+!.env.example
+!.env.examp
+auth.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa*
+id_ed25519*
+/.aws/
+/.ssh/
+/.claude/settings.local.json
+
+# Logs y archivos temporales
+*.log
+.DS_Store
+Thumbs.db
+.phpactor.json
+.phpunit.result.cache
+/.phpunit.cache/
+
+# Dependencias
+/node_modules/
+/vendor/
+
+# Compilación frontend
+/public/build/
+/public/hot
+/public/fonts-manifest.dev.json
+/public/storage
+
+# Almacenamiento de Laravel
+/storage/*.key
+/storage/pail
+/storage/app/private/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+!/storage/app/private/.gitignore
+!/storage/framework/cache/.gitignore
+!/storage/framework/sessions/.gitignore
+!/storage/framework/views/.gitignore
+!/storage/logs/.gitignore
+
+# Archivos locales de bases de datos
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+
+# Respaldos de bases de datos
+*.sql
+*.sql.gz
+*.sql.*
+*.dump
+*.dump.*
+/backups/
+
+# Entornos de desarrollo
+/.codex/
+/.cursor/
+/.idea/
+/nova/
+/.nova/
+/.vscode/
+/.zed/
+
+# Archivos auxiliares
+_ide_helper.php
+Homestead.json
+Homestead.yaml
+
+# Archivos de cobertura
+/coverage/
+
+# Archivos comprimidos
+*.zip
+*.tar.gz
+*.tgz
+*.tar
+*.7z
+*.rar
+*.bak
+*.backup
+.claude/skills
