@@ -1,0 +1,15 @@
+.citas-modulo .citas-filtros { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); align-items: end; gap: 16px; padding: 20px; }
+.citas-modulo label { display: grid; gap: 6px; font-size: .85rem; color: #35536a; }
+.citas-modulo .campo__entrada { padding: 10px 12px; width: 100%; }
+.citas-panel { display: grid; gap: 18px; padding: 22px; }
+.citas-datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; }
+.citas-datos dt { color: #697d8e; font-size: .8rem; }
+.citas-datos dd { margin: 5px 0 0; font-weight: 600; }
+.citas-acciones, .citas-turnos { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.citas-turnos { padding: 16px; }
+.citas-turnos label { display: flex; align-items: center; padding: 12px; border: 1px solid #dce6ee; border-radius: 8px; }
+.citas-operaciones { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+.citas-operaciones form { display: grid; gap: 10px; }
+.citas-notas { white-space: pre-wrap; overflow-wrap: anywhere; }
+.citas-seguimiento { padding: 16px; border: 1px solid #dce6ee; border-radius: 10px; }
+@media (max-width: 600px) { .citas-panel { padding: 16px; } .citas-modulo .citas-filtros { grid-template-columns: 1fr; padding: 16px; } }
