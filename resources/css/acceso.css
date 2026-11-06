@@ -1,0 +1,37 @@
+/* Accesos: mismo formulario y comportamiento, contexto lateral sereno. */
+.acceso { padding-block: 32px 40px; }
+.acceso__tarjeta { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); border: 1px solid var(--cv-borde); border-radius: var(--cv-radio); overflow: hidden; background: #fff; }
+.acceso__lateral { display: flex; flex-direction: column; padding: 28px; background: #edf5f3; border-right: 1px solid var(--cv-borde); }
+.acceso__marca { display: inline-flex; align-items: center; gap: 10px; color: var(--cv-azul); text-decoration: none; }
+.acceso__marca .marca__texto { font-size: 1.2rem; }
+.acceso__marca .logo-citavital { width: 32px; height: 32px; }
+.acceso__lateral-contenido { padding-block: 32px; }
+.acceso__lateral h2 { margin-top: 16px; font-size: 1.65rem; }
+.acceso__lateral-contenido > p { margin-top: 16px; color: var(--cv-texto-secundario); font-size: 0.9rem; }
+.acceso__beneficios { display: grid; gap: 16px; margin-top: 28px; }
+.acceso__beneficios li { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; }
+.acceso__beneficio-icono { color: #217861; }
+.acceso__lateral-nota { margin-top: auto; padding-top: 18px; border-top: 1px solid #cbded7; color: var(--cv-texto-secundario); font-size: 0.76rem; }
+.acceso__formulario { padding: 32px; }
+.volver { display: inline-flex; align-items: center; gap: 7px; font-size: 0.8rem; text-decoration: none; }
+.volver:hover { text-decoration: underline; }
+.acceso__encabezado { margin-top: 24px; }
+.acceso__encabezado h1 { font-size: clamp(1.6rem, 2.5vw, 2rem); }
+.acceso__encabezado > p:last-child { margin-top: 12px; color: var(--cv-texto-secundario); font-size: 0.9rem; }
+.acceso__formulario .formulario { margin-top: 28px; }
+.acceso__alterno { margin-top: 22px; color: var(--cv-texto-secundario); font-size: 0.8rem; }
+.acceso__alterno a { font-weight: 600; }
+.acceso__legal { display: flex; justify-content: center; align-items: flex-start; gap: 8px; margin-top: 20px; color: var(--cv-texto-secundario); font-size: 0.75rem; }
+.acceso__legal .icono { margin-top: 3px; }
+@media (max-width: 1150px) {
+    .acceso__tarjeta { grid-template-columns: 1fr; }
+    .acceso__lateral { padding: 20px 28px; border-right: 0; border-bottom: 1px solid var(--cv-borde); }
+    .acceso__marca, .acceso__beneficios, .acceso__lateral-nota, .acceso__lateral-contenido > p { display: none; }
+    .acceso__lateral-contenido { padding: 0; }
+    .acceso__lateral h2 { margin-top: 10px; font-size: 1.3rem; }
+}
+@media (max-width: 560px) {
+    .acceso { padding-block: 20px 28px; }
+    .acceso__formulario, .acceso__lateral { padding: 20px; }
+    .acceso__legal { font-size: 0.72rem; }
+}

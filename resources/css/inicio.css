@@ -1,0 +1,83 @@
+/* Portada institucional. Estilos independientes de los accesos y páginas internas. */
+.pagina-inicio {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    background: #edf4f7;
+    color: #203d4e;
+}
+
+.inicio-principal { flex: 1; }
+.inicio-contenedor { width: min(100% - 7rem, 1180px); margin-inline: auto; }
+
+.inicio-encabezado { position: relative; z-index: 2; background: #163f52; color: #fff; }
+.inicio-encabezado__interior { display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 75px; }
+.inicio-marca { display: inline-flex; align-items: center; gap: 0.65rem; color: #fff; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.035em; text-decoration: none; }
+.inicio-marca:hover { color: #fff; }
+.inicio-navegacion { display: flex; align-items: center; gap: 2.25rem; }
+.inicio-navegacion a { padding-block: 0.75rem; color: #e6eff3; font-size: 0.98rem; text-decoration: none; transition: color 250ms ease; }
+.inicio-navegacion a[aria-current] { color: #fff; font-weight: 700; }
+.inicio-navegacion a:hover { color: #8fe0de; }
+.inicio-encabezado :focus-visible { outline-color: #8fe0de; }
+.inicio-menu { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid #7394a3; border-radius: 8px; background: transparent; color: #fff; }
+
+/* Fotografía local a la derecha; el degradado protege la lectura del texto. */
+.inicio-heroe { position: relative; isolation: isolate; min-height: 460px; padding-block: 68px 130px; background: #234e61; color: #fff; }
+.inicio-heroe::before, .inicio-heroe::after { position: absolute; z-index: -1; inset: 0; content: ''; }
+.inicio-heroe::before { left: 26%; background: url('/images/fondo-medico.webp') right 62% / cover no-repeat; }
+.inicio-heroe::after { background: linear-gradient(90deg, #234e61 0%, #234e61 26%, rgba(35, 78, 97, 0.77) 47%, rgba(24, 71, 91, 0.22) 78%, rgba(24, 71, 91, 0.24) 100%); }
+.inicio-heroe h1 { margin-bottom: 0.75rem; color: #fff; font-size: clamp(3.4rem, 5.3vw, 4.75rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.12; }
+.inicio-heroe__subtitulo { max-width: 650px; margin-bottom: 1.2rem; font-size: clamp(1.25rem, 2vw, 1.7rem); font-weight: 700; line-height: 1.4; }
+.inicio-heroe__descripcion { max-width: 505px; color: #f0f5f7; font-size: 1.2rem; line-height: 1.5; }
+.inicio-heroe__linea { display: block; width: 76px; height: 4px; margin-top: 1.65rem; border-radius: 2px; background: #7bd7d5; }
+
+/* Una sola superficie con tres enlaces completos y separadores discretos. */
+.inicio-accesos { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: -82px; margin-bottom: 32px; padding: 14px; border-radius: 19px; background: #fff; box-shadow: 0 12px 30px rgba(25, 65, 83, 0.12); }
+.inicio-acceso { position: relative; display: flex; justify-content: center; padding: 20px 24px 22px; border-radius: 10px; color: #203d4e; text-align: center; text-decoration: none; transition: background-color 250ms ease; }
+.inicio-acceso + .inicio-acceso::before { position: absolute; top: 32px; bottom: 14px; left: 0; width: 1px; background: #d4e3e9; content: ''; }
+.inicio-acceso__contenido { display: flex; flex-direction: column; align-items: center; width: 100%; transition: transform 250ms ease; }
+.inicio-acceso .icono { margin-bottom: 14px; color: #417783; transition: color 250ms ease; }
+.inicio-acceso h2 { margin-bottom: 6px; color: #203d4e; font-size: clamp(1.3rem, 2.1vw, 1.75rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.25; }
+.inicio-acceso p { max-width: 240px; font-size: 1.075rem; line-height: 1.45; }
+.inicio-acceso:hover { color: #203d4e; }
+.inicio-acceso:focus-visible { outline: 3px solid #167884; outline-offset: -3px; background: #eff6fb; }
+.inicio-acceso:active { background: #e3f0f5; }
+@media (hover: hover) {
+    .inicio-acceso:hover { background: #eff6fb; }
+    .inicio-acceso:hover .inicio-acceso__contenido { transform: translateY(-4px); }
+    .inicio-acceso:hover .icono { color: #0d9488; }
+}
+.inicio-pie { padding: 10px 24px 28px; color: #536b78; font-size: 0.875rem; line-height: 1.7; text-align: center; }
+.inicio-pie p:first-child { color: #345365; font-weight: 600; }
+
+@media (max-width: 1000px) {
+    .inicio-contenedor { width: calc(100% - 5rem); }
+    .inicio-heroe { min-height: 420px; padding-top: 55px; padding-bottom: 115px; }
+    .inicio-heroe__descripcion { max-width: 440px; font-size: 1.1rem; }
+    .inicio-acceso { padding-inline: 15px; }
+    .inicio-acceso p { font-size: 1rem; }
+}
+@media (max-width: 600px) {
+    .inicio-contenedor { width: calc(100% - 2.5rem); }
+    .inicio-encabezado__interior { min-height: 75px; flex-wrap: wrap; gap: 0; padding-block: 12px; }
+    .inicio-marca { font-size: 1.6rem; }
+    .inicio-marca .icono { width: 36px; height: 36px; }
+    .inicio-menu:not([hidden]) { display: flex; }
+    .inicio-navegacion { justify-content: space-between; width: 100%; gap: 0.75rem; padding-top: 8px; }
+    .inicio-navegacion[data-menu-listo="true"]:not([data-abierto="true"]) { display: none; }
+    .inicio-heroe { min-height: 400px; padding-block: 48px 100px; }
+    .inicio-heroe::before { left: 0; background-position: 65% center; }
+    .inicio-heroe::after { background: linear-gradient(90deg, rgba(22, 63, 82, 0.96), rgba(22, 63, 82, 0.78)); }
+    .inicio-heroe h1 { font-size: 3.25rem; }
+    .inicio-heroe__subtitulo { max-width: 350px; font-size: 1.3rem; }
+    .inicio-heroe__descripcion { font-size: 1.05rem; }
+    .inicio-accesos { grid-template-columns: 1fr; margin-top: -48px; margin-bottom: 22px; padding: 10px; border-radius: 16px; }
+    .inicio-acceso { padding: 23px 12px; }
+    .inicio-acceso + .inicio-acceso::before { inset: 0 24px auto; width: auto; height: 1px; }
+    .inicio-acceso .icono { width: 43px; height: 43px; margin-bottom: 10px; }
+    .inicio-acceso h2 { font-size: 1.4rem; }
+    .inicio-pie { font-size: 0.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .inicio-acceso:hover .inicio-acceso__contenido { transform: none; }
+}

@@ -1,0 +1,51 @@
+/* ==========================================================================
+   CitaVital · Documentos legales demostrativos
+   ========================================================================== */
+
+.documento-legal {
+    max-width: 48rem;
+    margin-inline: auto;
+    color: var(--cv-texto);
+}
+
+.documento-legal .aviso {
+    margin-bottom: 2rem;
+}
+
+.documento-legal h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.7rem;
+    color: var(--cv-azul);
+    font-size: clamp(1.2rem, 2vw, 1.45rem);
+}
+
+.documento-legal p {
+    color: var(--cv-texto-secundario);
+    font-size: 0.96rem;
+    line-height: 1.8;
+}
+
+.documento-legal strong {
+    color: var(--cv-azul);
+}
+
+.documento-legal__acciones {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 2.75rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--cv-borde);
+}
+
+@media (max-width: 560px) {
+    .documento-legal__acciones {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .documento-legal__acciones .boton {
+        width: 100%;
+    }
+}
